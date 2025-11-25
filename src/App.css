@@ -1,42 +1,241 @@
-#root {
-  max-width: 1280px;
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #0f172a;
+  background-color: #020617;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f172a 0, #020617 55%);
+  color: #e5e7eb;
+}
+
+.section {
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 3rem 1.5rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.subtitle {
+  max-width: 42rem;
+  color: #9ca3af;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #38bdf8, #4f46e5);
+  color: white;
+}
+
+.btn.ghost {
+  background: transparent;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.section-subtitle {
+  color: #9ca3af;
+  max-width: 38rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.pill {
+  border-radius: 999px;
+  border: 1px solid #38bdf8;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.pill-soft {
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.filter-chip {
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  padding: 0.15rem 0.75rem;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.filter-chip--active {
+  border-color: #38bdf8;
+  background: #0f172a;
+}
+
+.projects-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
-  padding: 2em;
+  border-radius: 1rem;
+  border: 1px solid #1f2937;
+  padding: 1.25rem;
+  background: linear-gradient(145deg, #020617, #020617, #020617);
 }
 
-.read-the-docs {
-  color: #888;
+.card-header h3 {
+  margin: 0 0 0.25rem;
+}
+
+.project-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.project-description {
+  margin-top: 0.8rem;
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+.project-highlights {
+  margin-top: 0.8rem;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.project-highlights li + li {
+  margin-top: 0.3rem;
+}
+
+.card-footer {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.link {
+  font-size: 0.85rem;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.timeline-item + .timeline-item {
+  margin-top: 0.75rem;
+}
+
+.timeline-item h3 {
+  margin: 0 0 0.25rem;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+.contact-box {
+  margin-top: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #1f2937;
+  background: #020617;
+  font-size: 0.9rem;
+}
+
+.contact-box a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  border-top: 1px solid #111827;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  color: #6b7280;
 }
